@@ -219,6 +219,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
 
 # Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_peridot)
+
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.qcom \
