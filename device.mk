@@ -23,6 +23,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
 
+# Call the MiuiCamera setup
+$(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
