@@ -1,5 +1,8 @@
 # Audio
 audio.offload.min.duration.secs=30
 
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
+
 # Media
 media.stagefright.audio.deep=true
