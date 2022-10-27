@@ -234,3 +234,6 @@ on property:persist.vendor.high_touch_rate=0 && property:vendor.post_boot.parsed
     chmod 0660 /sys/module/kprofiles/parameters/auto_kp
     chown system system /sys/kernel/kprofiles/kp_mode
     chmod 0660 /sys/kernel/kprofiles/kp_mode
+
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
