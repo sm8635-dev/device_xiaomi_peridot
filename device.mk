@@ -186,6 +186,11 @@ $(foreach display_id, 4630947195234848131 4630947033261136259 463094654558005517
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# Enable whole-program R8 Java optimizations for SystemUI and system_server,
+# but also allow explicit overriding for testing and development.
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
