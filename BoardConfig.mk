@@ -123,7 +123,8 @@ BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     swinfo.fingerprint=peridot:$(AOSP_VERSION) \
     mtdoops.fingerprint=peridot:$(AOSP_VERSION) \
-    androidboot.init_fatal_reboot_target=recovery
+    androidboot.init_fatal_reboot_target=recovery \
+    kpti=off
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
