@@ -301,6 +301,7 @@ PRODUCT_PACKAGES += \
     LineageSDKOverlayPeridot \
     LineageSettingsOverlayPeridot \
     NfcOverlayPeridot \
+    OpenDeltaOverlayPeridot \
     SecureElementOverlayPeridot \
     SettingsOverlayPeridot \
     SettingsProviderOverlayPeridotPOCO \
