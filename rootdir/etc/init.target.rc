@@ -232,3 +232,6 @@ on property:persist.vendor.high_touch_rate=1 && property:vendor.post_boot.parsed
 
 on property:persist.vendor.high_touch_rate=0 && property:vendor.post_boot.parsed=1
     write /sys/devices/virtual/touch/touch_dev/bump_sample_rate 0
+
+    # Only owner can acces this node
+    chmod 440 /proc/net/unix
