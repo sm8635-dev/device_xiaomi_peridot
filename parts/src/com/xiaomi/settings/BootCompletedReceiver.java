@@ -16,6 +16,8 @@ import android.util.Log;
 import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
+import com.xiaomi.settings.display.ColorModeService;
+
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "XiaomiParts";
     private static final boolean DEBUG = true;
@@ -27,6 +29,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
+
+        // Display
+        context.startServiceAsUser(new Intent(context, ColorModeService.class),
+                UserHandle.CURRENT);
 
         // Override HDR types to enable Dolby Vision
         final DisplayManager displayManager = context.getSystemService(DisplayManager.class);
