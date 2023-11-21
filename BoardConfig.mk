@@ -113,7 +113,8 @@ TARGET_KERNEL_CONFIG := \
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     swinfo.fingerprint=peridot:$(YAAP_VERSION) \
-    mtdoops.fingerprint=peridot:$(YAAP_VERSION)
+    mtdoops.fingerprint=peridot:$(YAAP_VERSION) \
+    androidboot.init_fatal_reboot_target=recovery
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
