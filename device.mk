@@ -189,6 +189,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer
 
+# Debloat
+PRODUCT_PACKAGES += \
+    RemovePackagesPeridot
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
