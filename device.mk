@@ -194,6 +194,10 @@ PRODUCT_PACKAGES += \
 SYSTEM_OPTIMIZE_JAVA := true
 SYSTEMUI_OPTIMIZE_JAVA := true
 
+# Debloat
+PRODUCT_PACKAGES += \
+    RemovePackagesPeridot
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
