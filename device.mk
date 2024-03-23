@@ -199,6 +199,10 @@ $(call inherit-product, vendor/sony/dolby/dolby.mk)
 SYSTEM_OPTIMIZE_JAVA := true
 SYSTEMUI_OPTIMIZE_JAVA := true
 
+# Debloat
+PRODUCT_PACKAGES += \
+    RemovePackagesPeridot
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
