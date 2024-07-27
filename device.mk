@@ -414,6 +414,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal
 
 PRODUCT_PACKAGES += \
+    sensor-notifier
+
+PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal \
     sensors.xiaomi.v2
 
@@ -471,9 +474,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
 # Touchscreen
-PRODUCT_PACKAGES += \
-    nonui-notifier
-
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.xiaomi
 
