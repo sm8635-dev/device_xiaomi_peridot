@@ -290,6 +290,7 @@ PRODUCT_PACKAGES += \
 # Logging
 SPAMMY_LOG_TAGS := \
     AiAiEcho \
+    ColorManager \
     MiStcImpl \
     SDM \
     SDM-histogram \
