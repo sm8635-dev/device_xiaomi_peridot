@@ -254,18 +254,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
         .add_line_if_missing('setsockopt: 1'),
     (
-        'vendor/bin/hw/android.hardware.security.keymint-service.strongbox-nxp',
-        'vendor/lib64/libjc_keymint_nxp.so'
-    ): blob_fixup()
-        .replace_needed(
-            'android.hardware.security.keymint-V3-ndk.so',
-            'android.hardware.security.keymintperidot.so'
-        )
-        .replace_needed(
-            'libcppbor_external.so',
-            'libcppbor_peridot.so'
-    ),
-    (
         'vendor/bin/qcc-vendor',
         'vendor/bin/qms',
         'vendor/bin/xtra-daemon',
