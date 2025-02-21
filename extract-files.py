@@ -72,6 +72,8 @@ blob_fixups: blob_fixups_user_type = {
             'libgui.so',
             'libgui-xiaomi.so'
         ),
+    'odm/etc/init/vendor.qti.camera.provider-service_64.rc': blob_fixup()
+        .regex_replace(r'^(.*\n){5}', '\\1    setenv JE_MALLOC_ZERO_FILLING 1\n'),
     'system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml': blob_fixup()
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
