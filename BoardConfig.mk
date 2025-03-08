@@ -12,7 +12,6 @@ BUILD_BROKEN_DUP_RULES := true
 -include device/xiaomi/peridot-miuicamera/BoardConfig.mk
 
 # A/B
-AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
