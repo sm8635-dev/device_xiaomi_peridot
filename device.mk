@@ -23,6 +23,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
 
+# Reduce system server verbosity
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
