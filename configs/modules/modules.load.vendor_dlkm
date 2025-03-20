@@ -41,7 +41,6 @@ llcc-qcom.ko
 llcc_perfmon.ko
 boot_stats.ko
 core_hang_detect.ko
-hung_task_enh.ko
 mem-offline.ko
 msm_show_epoch.ko
 gh_tlmm_vm_mem_access.ko
