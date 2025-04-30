@@ -317,6 +317,9 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 
+# Camera Extension
+system_ext/framework/camerax-vendor-extensions.jar
+
 # Camera
 odm/bin/hw/vendor.qti.camera.provider-service_64
 odm/etc/camera/facefocus_models/detlmk.dlc
