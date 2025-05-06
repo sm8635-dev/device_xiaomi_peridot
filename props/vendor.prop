@@ -83,6 +83,7 @@ persist.backup.ntpServer=0.pool.ntp.org
 # Graphics
 debug.angle.feature_overrides_enabled=preferLinearFilterForYUV:mapUnspecifiedColorSpaceToPassThrough
 debug.egl.hw=0
+debug.hwui.skia_atrace_enabled=false
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=0
 debug.sf.early.app.duration=16600000
