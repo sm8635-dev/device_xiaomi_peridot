@@ -215,6 +215,7 @@ fs19xx_dlkm.ko
 machine_dlkm.ko
 swr_haptics_dlkm.ko
 hdmi_dlkm.ko
+lpass_bt_swr_dlkm.ko
 lpass_cdc_wsa2_macro_dlkm.ko
 lpass_cdc_wsa_macro_dlkm.ko
 lpass_cdc_va_macro_dlkm.ko
