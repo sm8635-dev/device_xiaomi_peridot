@@ -31,4 +31,7 @@
 
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">90</integer>
+
+    <!-- Hide VRR toggle -->
+    <bool name="config_disableVrrSetting">true</bool>
 </resources>
