@@ -313,7 +313,7 @@ vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 
 # Camera Extension
-system_ext/framework/camerax-vendor-extensions.jar
+system_ext/framework/camerax-vendor-extensions.jar:system/framework/camerax-vendor-extensions.jar;BOOT_JAR
 
 # Camera
 odm/bin/hw/vendor.qti.camera.provider-service_64
