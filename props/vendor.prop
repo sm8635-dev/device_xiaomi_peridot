@@ -164,6 +164,9 @@ vendor.display.vds_allow_hwc=1
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
 
+# HWUI
+debug.sf.enable_adpf_cpu_hint=true
+
 # Incremental
 ro.incremental.enable=yes
 
