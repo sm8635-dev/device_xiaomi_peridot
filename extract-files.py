@@ -18,6 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/xiaomi/peridot',
     'hardware/qcom-caf/sm8650',
     'hardware/qcom-caf/wlan',
     'hardware/xiaomi',
@@ -106,6 +107,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libtinyxml2.so',
             'libtinyxml2-v34.so'
+        )
+        .replace_needed(
+            'libui.so',
+            'libui-v34.so'
     ),
     (
         'odm/lib64/camera/com.qti.actuator.peridot_aac_imx882_gt9764ber_wide_i_actuator.so',
