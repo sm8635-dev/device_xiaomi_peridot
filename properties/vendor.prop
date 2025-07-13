@@ -88,7 +88,6 @@ persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
 debug.angle.feature_overrides_enabled=preferLinearFilterForYUV:mapUnspecifiedColorSpaceToPassThrough
-debug.egl.hw=0
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=0
 debug.sf.early.app.duration=16600000
@@ -98,7 +97,6 @@ debug.sf.earlyGl.sf.duration=16600000
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.frame_rate_multiple_threshold=120
-debug.sf.hw=0
 debug.sf.late.app.duration=16600000
 debug.sf.late.sf.duration=10500000
 debug.sf.predict_hwc_composition_strategy=0
