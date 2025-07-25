@@ -120,7 +120,8 @@ BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=peridot:$(AOSP_VERSION) \
     mtdoops.fingerprint=peridot:$(AOSP_VERSION) \
     androidboot.init_fatal_reboot_target=recovery \
-    kpti=off
+    kpti=off \
+    sysctl.kernel.firmware_config.force_sysfs_fallback=1
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
