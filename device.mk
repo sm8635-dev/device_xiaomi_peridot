@@ -495,6 +495,7 @@ PRODUCT_COPY_FILES += \
 
 # Touchscreen
 PRODUCT_PACKAGES += \
+    nonui-notifier \
     vendor.lineage.touch@1.0-service.xiaomi
 
 PRODUCT_COPY_FILES += \
