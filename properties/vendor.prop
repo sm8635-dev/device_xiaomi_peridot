@@ -54,6 +54,8 @@ ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
 camera.disable_zsl_mode=true
+persist.vendor.camera.logLevel=0
+persist.vendor.camera.sensor=0
 ro.camera.enableCamera1MaxZsl=1
 
 # Crypto
