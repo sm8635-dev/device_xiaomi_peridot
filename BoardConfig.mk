@@ -13,7 +13,7 @@ BUILD_BROKEN_DUP_RULES := true
 
 # A/B
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS := \
+AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     init_boot \
