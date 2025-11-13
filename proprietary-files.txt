@@ -1734,6 +1734,7 @@ vendor/lib64/libqtikeymaster4.so
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service-qti
+vendor/bin/KmInstallKeybox
 vendor/etc/hal_uuid_map_peridot.xml
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
