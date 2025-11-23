@@ -12,8 +12,9 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SeekBarPreference;
 import com.xiaomi.settings.R;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
-public class ChargingControlFragment extends PreferenceFragment implements
+public class ChargingControlFragment extends SettingsBasePreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private SeekBarPreference mLimitPref;
