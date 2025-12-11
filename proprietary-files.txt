@@ -32,8 +32,8 @@ odm/lib/rfsa/adsp/libQnnHtpV73QemuDriver.so
 odm/lib/rfsa/adsp/libQnnHtpV73Skel.so
 odm/lib/rfsa/adsp/libQnnHtpV75.so
 odm/lib/rfsa/adsp/libQnnHtpV75Skel.so
-odm/lib/rfsa/adsp/libQnnSaver.so
-odm/lib/rfsa/adsp/libQnnSystem.so
+odm/lib/rfsa/adsp/libQnnSaver.so;MODULE_SUFFIX=_adsp
+odm/lib/rfsa/adsp/libQnnSystem.so;MODULE_SUFFIX=_adsp
 odm/lib/rfsa/adsp/libSnpeHtpV75Skel.so;SYMLINK=vendor/lib/rfsa/adsp/libSnpeHtpV75Skel.so
 odm/lib/rfsa/adsp/libadsp_jpege_skel.so
 odm/lib/rfsa/adsp/libarc_htp_driver_skel.so
@@ -161,7 +161,7 @@ vendor/lib64/libqtigefar.so
 vendor/lib64/libresampler.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libswspatializer_ext.so
-vendor/lib64/libtensorflowlite_c.so
+vendor/lib64/libtensorflowlite_c.so:vendor/lib64/libtensorflowlite_c_vendor.so;FIX_SONAME
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libvui_intf.so
