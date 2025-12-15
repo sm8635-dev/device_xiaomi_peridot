@@ -86,6 +86,11 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libtensorflowlite_c.so', 'libtensorflowlite_c_vendor.so'),
     (
+        'vendor/lib64/libdpps.so',
+        'vendor/lib64/libsnapdragoncolor-manager.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2_bp4a.so'),
+    (
         'odm/lib64/hw/camera.qcom.so',
         'odm/lib64/hw/camera.xiaomi.so',
         'odm/lib64/hw/com.qti.chi.override.so',
