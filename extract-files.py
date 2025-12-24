@@ -63,8 +63,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so')
         .remove_needed('android.hidl.base@1.0.so'),
-    'system_ext/bin/horae': blob_fixup()
-        .replace_needed('libprotobuf-cpp-lite.so', 'libprotobuf-cpp-lite-21.7.so'),
     'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
     (
@@ -73,14 +71,6 @@ blob_fixups: blob_fixups_user_type = {
         'odm/etc/camera/night_motiontuning.xml'
     ): blob_fixup()
         .regex_replace('xml=version', 'xml version'),
-    (
-        'odm/lib64/libCOppLceTonemapAPI.so',
-        'odm/lib64/libCS.so',
-        'odm/lib64/libSuperRaw.so',
-        'odm/lib64/libYTCommon.so',
-        'odm/lib64/libyuv2.so',
-    ): blob_fixup()
-        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     (
         'vendor/lib64/libcapiv2uvvendor.so',
         'vendor/lib64/liblistensoundmodel2vendor.so',
