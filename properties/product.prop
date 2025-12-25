@@ -29,6 +29,9 @@ remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 remote_provisioning.strongbox.rkp_only=true
 
+# Rescue
+persist.sys.disable_rescue=true
+
 # Skia tracing
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
