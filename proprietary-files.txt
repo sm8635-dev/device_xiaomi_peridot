@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from peridot OS2.0.206.0.VNPMIXM - peridot_global-ota_full-OS2.0.206.0.VNPMIXM
+# All unpinned blobs below are extracted from peridot OS2.0.207.0.VNPMIXM - peridot_global-ota_full-OS2.0.207.0.VNPMIXM
 
 # ACDB
 odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb
@@ -1351,7 +1351,7 @@ vendor/lib64/rfs/dsp/libvpt_action_recognition.so
 vendor/lib64/rfs/dsp/libworker_pool.so
 
 # Diag
-system/lib64/vendor.qti.diaghal-V1-ndk.so
+system/lib64/vendor.qti.diaghal-V1-ndk.so|bfc18af27c4cd9d46403695f9dd8a15742d91c84
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
@@ -2115,7 +2115,7 @@ product/etc/permissions/UimService.xml
 product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
-system/etc/sysconfig/qti_whitelist.xml
+system/system/etc/sysconfig/qti_whitelist.xml|38dce21136ead726fc0f57504b837c2511cdd3a1
 system_ext/app/AtFwd2/AtFwd2.apk
 system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -2621,7 +2621,7 @@ vendor/lib64/libtaautoload.so
 vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
 
 # TinyXML2
-system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2_bp4a.so;FIX_SONAME
+system/system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2_bp4a.so;FIX_SONAME|f8ec07d79a0256fb35caabc08883b3719f25fe5a
 
 # VPP
 vendor/bin/hw/qconfigservice
