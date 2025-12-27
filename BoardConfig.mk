@@ -108,6 +108,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_PRODUCT=$(PRODUCT_DEVICE)
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8635
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
+    vendor/extra.config \
     vendor/pineapple_GKI.config \
     vendor/peridot_GKI.config
 
