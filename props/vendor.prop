@@ -234,6 +234,9 @@ vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
 
+# Update engine
+ro.virtual_ab.compression.threads=true
+
 # Volume
 ro.config.alarm_vol_steps=15
 ro.config.media_vol_default=10
