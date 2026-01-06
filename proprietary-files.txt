@@ -1310,6 +1310,7 @@ vendor/lib64/libqisl.so
 vendor/lib64/libqwes.so
 vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
+vendor/lib64/libspl.so
 vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
@@ -1957,7 +1958,6 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libskewknob.so
-vendor/lib64/libspl.so
 vendor/lib64/libsplh.so
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
 vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so
