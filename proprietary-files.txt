@@ -2066,6 +2066,12 @@ vendor/lib64/libtracker_6dof_impl.so
 vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
 vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 
+# QSPM
+vendor/lib64/libqspm-mem-utils-vendor.so
+vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
+vendor/lib64/vendor.qti.qspmhal-impl.so
+vendor/lib64/vendor.qti.qspmhal@1.0.so
+
 # RIL
 odm/etc/MESubway_prebuilt.db
 odm/etc/me_config.xml
