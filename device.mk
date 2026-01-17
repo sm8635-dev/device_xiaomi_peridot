@@ -159,6 +159,11 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.demura-service
+
+PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor \
     vendor.qti.hardware.display.config-V11-ndk.vendor
 
