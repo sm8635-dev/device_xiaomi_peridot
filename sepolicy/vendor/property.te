@@ -21,3 +21,6 @@ vendor_public_prop(vendor_miui_singlesim_prop)
 
 # Bluetooth
 vendor_public_prop(vendor_bt_stack_prop)
+
+# Power
+vendor_public_prop(vendor_power_prop)
