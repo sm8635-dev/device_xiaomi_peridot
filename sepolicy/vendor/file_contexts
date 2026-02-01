@@ -90,6 +90,10 @@
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal                                                   u:object_r:hal_sensors_default_exec:s0
 
+# Strongbox
+/vendor/bin/hw/android\.hardware\.security\.keymint3?-service\.strongbox[-\.]nxp    u:object_r:vendor_hal_keymint_strongbox_exec:s0
+/vendor/bin/hw/android\.hardware\.weaver-service\.nxp(-qti)?                        u:object_r:vendor_hal_weaver_default_exec:s0
+
 # Touch
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
 /sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
