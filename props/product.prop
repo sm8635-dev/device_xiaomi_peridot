@@ -28,3 +28,7 @@ bluetooth.profile.vcp.controller.enabled=false
 
 # Media
 media.stagefright.audio.deep=true
+
+# RKPD
+remote_provisioning.enable_rkpd=true
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
