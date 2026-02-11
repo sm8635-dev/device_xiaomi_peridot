@@ -1,0 +1,4 @@
+# FastCharge
+allow system_app vendor_sysfs_battery_supply:dir search;
+allow system_app sysfs_fastcharge:file { open read write getattr };
+allow system_app vendor_sysfs_battery_supply:file { open read getattr };
