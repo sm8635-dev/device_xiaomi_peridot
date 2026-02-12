@@ -218,3 +218,17 @@ service fan_control_turn_off /vendor/bin/fan_service 0
     user root
     disabled
     oneshot
+
+on property:debug.high_touch_rate=1
+    setprop persist.vendor.high_touch_rate 1
+    write /sys/devices/virtual/touch/touch_dev/bump_sample_rate 1
+
+on property:debug.high_touch_rate=0
+    setprop persist.vendor.high_touch_rate 0
+    write /sys/devices/virtual/touch/touch_dev/bump_sample_rate 0
+
+on property:persist.vendor.high_touch_rate=1 && property:vendor.post_boot.parsed=1
+    write /sys/devices/virtual/touch/touch_dev/bump_sample_rate 1
+
+on property:persist.vendor.high_touch_rate=0 && property:vendor.post_boot.parsed=1
+    write /sys/devices/virtual/touch/touch_dev/bump_sample_rate 0
