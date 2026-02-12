@@ -143,6 +143,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Display
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
