@@ -127,12 +127,12 @@ PRODUCT_COPY_FILES += \
 
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
-    dalvik.vm.heapstartsize?=16m \
-    dalvik.vm.heapgrowthlimit?=384m \
-    dalvik.vm.heapsize?=512m \
-    dalvik.vm.heaptargetutilization?=0.75 \
-    dalvik.vm.heapminfree?=512k \
-    dalvik.vm.heapmaxfree?=8m
+    dalvik.vm.heapstartsize=24m \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.46 \
+    dalvik.vm.heapminfree=8m \
+    dalvik.vm.heapmaxfree=48m
 
 # Display
 PRODUCT_PACKAGES += \
