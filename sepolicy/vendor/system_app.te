@@ -2,3 +2,6 @@
 allow system_app vendor_sysfs_battery_supply:dir search;
 allow system_app sysfs_fastcharge:file { open read write getattr };
 allow system_app vendor_sysfs_battery_supply:file { open read getattr };
+
+# Allow KProfiles to be adjusted by a system app
+allow system_app sysfs_kprofiles:file rw_file_perms;
