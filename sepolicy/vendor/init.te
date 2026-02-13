@@ -16,3 +16,6 @@ set_prop(vendor_init, vendor_fp_info_prop)
 
 # Bluetooth
 set_prop(vendor_init, vendor_bt_stack_prop)
+
+# KProfiles
+allow init sysfs_kprofiles:file { setattr };
