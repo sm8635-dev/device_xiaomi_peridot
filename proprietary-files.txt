@@ -428,14 +428,6 @@ odm/etc/camera/peridot_aac_imx355_gt24p64e_ultra_i_eeprom_gloden.bin
 odm/etc/camera/peridot_aac_imx882_gt24p128f_wide_i_eeprom_gloden.bin
 odm/etc/camera/peridot_ofilm_imx355_p24c64e_ultra_ii_eeprom_gloden.bin
 odm/etc/camera/peridot_ofilm_ov20b40_p24c64e_front_eeprom_gloden.bin
-odm/etc/camera/portraitrepaire_front_class.json
-odm/etc/camera/portraitrepaire_front_class_bokeh.json
-odm/etc/camera/portraitrepaire_front_live.json
-odm/etc/camera/portraitrepaire_front_live_bokeh.json
-odm/etc/camera/portraitrepaire_rear_class.json
-odm/etc/camera/portraitrepaire_rear_class_bokeh.json
-odm/etc/camera/portraitrepaire_rear_live.json
-odm/etc/camera/portraitrepaire_rear_live_bokeh.json
 odm/etc/camera/preview_bokeh_params_pro.json
 odm/etc/camera/resources/TStools_default_param.json
 odm/etc/camera/resources/default_param.json
