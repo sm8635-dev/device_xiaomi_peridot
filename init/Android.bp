@@ -1,118 +1,118 @@
 sh_binary {
     name: "init.class_main.sh",
-    src: "bin/init.class_main.sh",
+    src: "init.class_main.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-cliffs_2_2_1.sh",
-    src: "bin/init.kernel.post_boot-cliffs_2_2_1.sh",
+    src: "init.kernel.post_boot-cliffs_2_2_1.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-cliffs_2_3_0.sh",
-    src: "bin/init.kernel.post_boot-cliffs_2_3_0.sh",
+    src: "init.kernel.post_boot-cliffs_2_3_0.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-cliffs_3_3_1.sh",
-    src: "bin/init.kernel.post_boot-cliffs_3_3_1.sh",
+    src: "init.kernel.post_boot-cliffs_3_3_1.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-cliffs_default_3_4_1.sh",
-    src: "bin/init.kernel.post_boot-cliffs_default_3_4_1.sh",
+    src: "init.kernel.post_boot-cliffs_default_3_4_1.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-cliffs.sh",
-    src: "bin/init.kernel.post_boot-cliffs.sh",
+    src: "init.kernel.post_boot-cliffs.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot-memory.sh",
-    src: "bin/init.kernel.post_boot-memory.sh",
+    src: "init.kernel.post_boot-memory.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.kernel.post_boot.sh",
-    src: "bin/init.kernel.post_boot.sh",
+    src: "init.kernel.post_boot.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.early_boot.sh",
-    src: "bin/init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.post_boot.sh",
-    src: "bin/init.qcom.post_boot.sh",
+    src: "init.qcom.post_boot.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.sh",
-    src: "bin/init.qcom.sh",
+    src: "init.qcom.sh",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "charger_fw_fstab.qti",
-    src: "etc/charger_fw_fstab.qti",
+    src: "charger_fw_fstab.qti",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "fstab.qcom",
-    src: "etc/fstab.qcom",
+    src: "fstab.qcom",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "fstab.zram",
-    src: "etc/fstab.zram",
+    src: "fstab.zram",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.peridot.rc",
-    src: "etc/init.peridot.rc",
+    src: "init.peridot.rc",
     sub_dir: "init",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.qcom.factory.rc",
-    src: "etc/init.qcom.factory.rc",
+    src: "init.qcom.factory.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.qcom.rc",
-    src: "etc/init.qcom.rc",
+    src: "init.qcom.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.recovery.qcom.rc",
-    src: "etc/init.recovery.qcom.rc",
+    src: "init.recovery.qcom.rc",
     sub_dir: "init",
     recovery: true,
 }
 
 prebuilt_etc {
     name: "init.target.rc",
-    src: "etc/init.target.rc",
+    src: "init.target.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
@@ -120,13 +120,13 @@ prebuilt_etc {
 prebuilt_etc {
     name: "ueventd-odm.rc",
     filename: "ueventd.rc",
-    src: "etc/ueventd-odm.rc",
+    src: "ueventd-odm.rc",
     device_specific: true,
 }
 
 prebuilt_etc {
     name: "ueventd.qcom.rc",
     filename: "ueventd.rc",
-    src: "etc/ueventd.qcom.rc",
+    src: "ueventd.qcom.rc",
     vendor: true,
 }
