@@ -188,7 +188,7 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.zram
-    write /proc/sys/vm/swappiness 60
+    write /proc/sys/vm/swappiness 100
 
 on property:sys.shutdown.requested=*
     write /sys/kernel/qcom_rproc/shutdown_in_progress 1
