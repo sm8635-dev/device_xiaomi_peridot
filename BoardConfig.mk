@@ -174,8 +174,6 @@ TARGET_KERNEL_EXT_MODULES := \
 CAMERA_PACKAGE_NAME := com.android.camera
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
-
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_EROFS_COMPRESSOR := lz4
