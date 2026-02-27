@@ -15,7 +15,7 @@ attribute hal_aidlbgservice;
 attribute hal_aidlbgservice_client;
 attribute hal_aidlbgservice_server;
 
-# Displatfeature
+# Displayfeature
 attribute vendor_hal_displayfeature_xiaomi;
 attribute vendor_hal_displayfeature_xiaomi_client;
 attribute vendor_hal_displayfeature_xiaomi_server;
