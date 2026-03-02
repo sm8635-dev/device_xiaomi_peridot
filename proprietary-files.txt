@@ -1,16 +1,10 @@
-# All unpinned blobs below are extracted from peridot OS2.0.208.0.VNPMIXM - peridot_global-ota_full-OS2.0.208.0.VNPMIXM
+# All unpinned blobs below are extracted from peridot OS3.0.4.0.WNPMIXM - peridot_global-ota_full-OS3.0.4.0.WNPMIXM
 
 # ACDB
 odm/etc/acdbdata/Fluence/foursemi/Fluence_acdb_cal_fs.acdb
 odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.6.5_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_3.4_enpuv4.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_3.0_enpuv4.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__4.8.14_1.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_3.4_enpuv4.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__4.8.3_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_3.0_enpuv4.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_3.4_enpuv4.pmd
 
@@ -208,6 +202,7 @@ odm/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice.aidl.xml
 odm/lib64/libclient2slpi.notifier.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
+vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
 
 # CNE
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
@@ -424,7 +419,6 @@ odm/etc/camera/beauty_config_cn_8g.json
 odm/etc/camera/beauty_config_gl.json
 odm/etc/camera/beauty_config_gl_8g.json
 odm/etc/camera/beauty_style_nude.cng
-odm/etc/camera/cameraopt.json
 odm/etc/camera/camerascene.json
 odm/etc/camera/camxoverridesettings.txt
 odm/etc/camera/com.xiaomi.dcal.wu.golden
@@ -677,6 +671,7 @@ odm/lib64/com.qualcomm.mcx.linearmapper.so
 odm/lib64/com.qualcomm.mcx.nonlinearmapper.so
 odm/lib64/com.qualcomm.mcx.policy.mfl.so
 odm/lib64/com.qualcomm.qti.mcx.usecase.extension.so
+odm/lib64/com.xiaomi.camdfx.so
 odm/lib64/com.xiaomi.camhal.overlap.so
 odm/lib64/com.xiaomi.camhal.submodel.camxfrag.so
 odm/lib64/com.xiaomi.camhal.submodel.chifrag.so
@@ -692,8 +687,8 @@ odm/lib64/libHISCppAlgos.so
 odm/lib64/libIMTCppAlgos.so
 odm/lib64/libITT.so
 odm/lib64/libMiMotion.so
+odm/lib64/libMiPhotoFilter.so
 odm/lib64/libMiStereoFactoryCalibAnalyzeBin_qual.so
-odm/lib64/libMiVideoFilter.so
 odm/lib64/libPlatformValidatorShared.so
 odm/lib64/libSNPE.so;SYMLINK=vendor/lib64/libSNPE.so
 odm/lib64/libSnpeDspV66Stub.so;FIX_SONAME
@@ -869,6 +864,8 @@ vendor/lib64/libthreadutils.so
 vendor/lib64/libubwcp.so
 vendor/lib64/libultrahdr.so:vendor/lib64/libultrahdr_prebuilt.so;FIX_SONAME
 vendor/lib64/vendor.xiaomi.hardware.aon-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.camera.synthetic-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.camera.synthetic-impl.so
 vendor/lib64/vendor.xiaomi.hardware.quickcamera-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.seccam-V1-ndk.so
 vendor/lib64/vendor.xiaomi.sensor.camera-V1-ndk.so
@@ -1440,17 +1437,17 @@ odm/etc/disp0/mdss_dsi_n16t_42_0a_0c_dsc_vid/mi_gc_1.txt
 odm/etc/disp0/mdss_dsi_n16t_42_0a_0c_dsc_vid/mi_gc_2.txt
 odm/etc/disp0/mdss_dsi_n16t_42_0a_0c_dsc_vid/mi_gc_3.txt
 odm/etc/df_default.xml
-vendor/etc/display/3dlut-pt-onnx-ptq-htp-fp16.dlc
-vendor/etc/display/8635_sr_2x_y1280x720.dlc
-vendor/etc/display/8635_sr_2x_y540x960.dlc
-vendor/etc/display/8635_sr_2x_y720x1280.dlc
-vendor/etc/display/8635_sr_2x_y960x540.dlc
-vendor/etc/display/8635_sr_3x_y368x640.dlc
-vendor/etc/display/8635_sr_3x_y640x368.dlc
-vendor/etc/display/LUT.txt
-vendor/etc/display/LUT0.txt
-vendor/etc/display/LUT1.txt
-vendor/etc/display/LUT2.txt
+odm/etc/display/3dlut-pt-onnx-ptq-htp-fp16.dlc
+odm/etc/display/8635_sr_2x_y1280x720.dlc
+odm/etc/display/8635_sr_2x_y540x960.dlc
+odm/etc/display/8635_sr_2x_y720x1280.dlc
+odm/etc/display/8635_sr_2x_y960x540.dlc
+odm/etc/display/8635_sr_3x_y368x640.dlc
+odm/etc/display/8635_sr_3x_y640x368.dlc
+odm/etc/display/LUT.txt
+odm/etc/display/LUT0.txt
+odm/etc/display/LUT1.txt
+odm/etc/display/LUT2.txt
 
 # Fingerprint
 odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
@@ -1462,7 +1459,7 @@ vendor/lib64/vendor.xiaomi.hardware.fx.tunnel-V1-ndk.so
 # GNSS
 odm/bin/hw/android.hardware.gnss-aidl-service-qti
 odm/etc/init/android.hardware.gnss-aidl-service-qti.rc
-odm/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
+odm/etc/vintf/manifest/gnss-default.xml:odm/etc/vintf/manifest/gnss-peridot.xml
 odm/etc/vintf/manifest/vendor.qti.gnss-service.xml
 odm/etc/izat_device.conf
 odm/lib64/android.hardware.gnss-aidl-impl-qti.so
@@ -1599,6 +1596,7 @@ vendor/etc/hal_uuid_map_peridot.xml
 vendor/lib64/libqtikeymint.so
 
 # Listen
+odm/lib64/vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libxlog.so
 
@@ -1739,7 +1737,7 @@ vendor/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
 
 # QESDK
-system_ext/app/QesdkSysService/QesdkSysService.apk
+system_ext/app/QesdkSysService/QesdkSysService.apk|e64293028d0df131a2536e9ced0eeeaf68fdfe32
 system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml
 system_ext/lib64/libqesdk_ndk_platform.qti.so
 vendor/bin/qesdk-manager
