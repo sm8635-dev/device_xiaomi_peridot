@@ -383,6 +383,7 @@ PRODUCT_PACKAGES += \
     ApertureOverlayPeridot \
     CarrierConfigOverlayPeridot \
     DeviceAsWebcamResTarget \
+    EmptyPropsOverlay \
     FrameworkOverlayPeridot \
     FastChargePeridot \
     LineageSDKOverlayPeridot \
