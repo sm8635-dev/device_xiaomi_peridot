@@ -4,4 +4,4 @@ git reset --hard FETCH_HEAD
 croot
 
 rm -rf vendor/lineage-priv/keys
-git clone https://github.com/Neon-Duchamp/keys.git -b old-keys vendor/lineage-priv/keys
+git clone https://github.com/sm8635-dev/signed_keys.git -b ap3a vendor/lineage-priv/keys
