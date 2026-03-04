@@ -5,9 +5,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qco
 # Extcon sysfs
 genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform:lpass-cdc/wcd937x-codec/extcon                 u:object_r:sysfs_extcon:s0
 
-# FastCharge
-genfscon sysfs /class/qcom-battery/fastcharge_enable u:object_r:sysfs_fastcharge:s0
-
 # KProfiles
 genfscon sysfs /module/kprofiles/parameters/auto_kp u:object_r:sysfs_kprofiles:s0
 genfscon sysfs /kernel/kprofiles/kp_mode u:object_r:sysfs_kprofiles:s0
@@ -19,6 +16,9 @@ genfscon sysfs /devices/virtual/touch/touch_dev/gesture_double_tap_enabled u:obj
 genfscon sysfs /devices/virtual/touch/touch_dev/gesture_double_tap_state u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_enabled u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_state u:object_r:vendor_sysfs_sensors:s0
+
+# Touchscreen
+genfscon sysfs /devices/virtual/touch/touch_dev/bump_sample_rate u:object_r:vendor_sysfs_touch:s0
 
 # Wakeup
 genfscon sysfs /devices/platform/soc/soc:xiaomi_fingerprint/wakeup u:object_r:sysfs_wakeup:s0

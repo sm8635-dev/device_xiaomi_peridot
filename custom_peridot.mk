@@ -8,13 +8,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common PixelOS stuff.
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := yaap_peridot
+PRODUCT_NAME := custom_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -22,6 +22,8 @@ PRODUCT_MODEL := 24069PC21G
 
 PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot
+
+-include vendor/lineage-priv/keys/keys.mk
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.208.0.VNPMIXM release-keys" \
@@ -32,5 +34,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Flags
-TARGET_BUILD_GAPPS := true
-TARGET_ENABLE_BLUR := true
+TARGET_SCREEN_WIDTH := 1080

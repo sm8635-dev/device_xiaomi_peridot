@@ -81,8 +81,7 @@ TARGET_USES_VULKAN := true
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/hidl/compatibility_matrix.device.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/yaap/config/device_framework_matrix.xml
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
 
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/framework_manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
@@ -122,8 +121,8 @@ TARGET_KERNEL_CONFIG := \
 
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
-    swinfo.fingerprint=peridot:$(YAAP_VERSION) \
-    mtdoops.fingerprint=peridot:$(YAAP_VERSION) \
+    swinfo.fingerprint=peridot:$(AOSP_VERSION) \
+    mtdoops.fingerprint=peridot:$(AOSP_VERSION) \
     androidboot.init_fatal_reboot_target=recovery
 
 BOARD_BOOTCONFIG := \
@@ -220,7 +219,6 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
-TARGET_KERNEL_ADDITIONAL_FLAGS += TARGET_BOARD_PLATFORM=$(TARGET_BOARD_PLATFORM)
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
@@ -233,7 +231,6 @@ $(call soong_config_set, ufsbsg, ufsframework, bsg)
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_UI_MARGIN_HEIGHT := 126
 TARGET_USERIMAGES_USE_F2FS := true
 
 # RIL
@@ -243,11 +240,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-
-# Touch
-SOONG_CONFIG_NAMESPACES += XIAOMI_TOUCH
-SOONG_CONFIG_XIAOMI_TOUCH := HIGH_TOUCH_POLLING_PATH
-SOONG_CONFIG_XIAOMI_TOUCH_HIGH_TOUCH_POLLING_PATH := /sys/devices/virtual/touch/touch_dev/bump_sample_rate
 
 # Vendor security patch
 BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)

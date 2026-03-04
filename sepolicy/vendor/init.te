@@ -14,10 +14,6 @@ set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_fp_info_prop)
 
-# FastCharge
-allow init sysfs_fastcharge:file { setattr };
-allow init vendor_sysfs_power_supply:file { setattr };
-
 # KProfiles
 allow init sysfs_kprofiles:file { setattr };
 
