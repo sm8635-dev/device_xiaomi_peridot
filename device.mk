@@ -348,6 +348,7 @@ PRODUCT_PACKAGES += \
     LineageSDKOverlayPeridot \
     LineageSettingsOverlayPeridot \
     NfcOverlayPeridot \
+    PixelUpdater \
     SecureElementOverlayPeridot \
     SettingsOverlayPeridot \
     SettingsProviderOverlayPeridotPOCO \
