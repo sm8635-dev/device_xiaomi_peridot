@@ -17,19 +17,11 @@ $(call inherit-product, device/xiaomi/peridot/device.mk)
 PRODUCT_NAME := custom_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := 24069PC21G
-
-PRODUCT_SYSTEM_NAME := peridot_global
-PRODUCT_SYSTEM_DEVICE := peridot
 
 -include vendor/lineage-priv/keys/keys.mk
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.208.0.VNPMIXM release-keys" \
-    BuildFingerprint=POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.208.0.VNPMIXM:user/release-keys \
-    DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
-    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BuildFingerprint := POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.208.0.VNPMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
