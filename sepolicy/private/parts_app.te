@@ -18,3 +18,7 @@ allow parts_app system_app_data_file:lnk_file create_file_perms;
 # Charging Control
 allow parts_app vendor_sysfs_battery_supply:dir search;
 allow parts_app vendor_sysfs_battery_supply:file rw_file_perms;
+
+# Displayfeature
+allow parts_app vendor_hal_displayfeature_xiaomi_service:service_manager find;
+binder_call(parts_app, vendor_hal_displayfeature_xiaomi_default)
