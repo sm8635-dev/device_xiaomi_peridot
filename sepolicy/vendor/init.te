@@ -20,3 +20,6 @@ allow init vendor_sysfs_power_supply:file { setattr };
 
 # KProfiles
 allow init sysfs_kprofiles:file { setattr };
+
+# Bluetooth
+set_prop(vendor_init, vendor_bt_stack_prop)
