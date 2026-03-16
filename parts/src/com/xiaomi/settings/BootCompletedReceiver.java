@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.UserHandle;
 import android.util.Log;
 
+import com.xiaomi.settings.battery.ChargingLimitService;
 import com.xiaomi.settings.display.ColorModeService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -34,6 +35,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private static void onLockedBootCompleted(Context context) {
         // Display
         context.startServiceAsUser(new Intent(context, ColorModeService.class),
+                UserHandle.CURRENT);
+        // Battery
+        context.startServiceAsUser(new Intent(context, ChargingLimitService.class),
                 UserHandle.CURRENT);
     }
 

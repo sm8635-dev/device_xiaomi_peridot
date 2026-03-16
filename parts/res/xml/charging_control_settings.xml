@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="Charging Control">
+
+    <PreferenceCategory android:title="Settings">
+        <SwitchPreference
+            android:key="charging_control"
+            android:title="Enable Charging Limit"
+            android:summary="Automatically stop charging at a chosen level"
+            android:defaultValue="false" />
+
+        <SeekBarPreference
+            android:key="charging_limit"
+            android:title="Stop at Percentage"
+            android:summary="Current limit: %s%%"
+            android:defaultValue="80"
+            android:max="100"
+            app:min="50"
+            android:dependency="charging_control" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

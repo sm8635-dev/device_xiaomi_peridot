@@ -7,4 +7,8 @@
 <resources>
     <!-- Xiaomi Parts -->
     <string name="app_name">Xiaomi Parts</string>
+
+    <!-- Charging Control -->
+    <string name="charging_control_title">Charging Control</string>
+    <string name="charging_limit_title">Stop at Percentage</string>
 </resources>
