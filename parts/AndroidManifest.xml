@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2023 Paranoid Android
+     Copyright (C) 2023-2024 Paranoid Android
 
      SPDX-License-Identifier: Apache-2.0
 -->
@@ -33,15 +33,23 @@
             </intent-filter>
         </receiver>
 
-        <service
-            android:name=".display.ColorModeService"
-            android:permission="ColorModeService">
-        </service>
+        <service android:name=".display.ColorModeService" />
 
-        <service
-            android:name=".battery.ChargingLimitService"
-            android:permission="ChargingLimitService">
-        </service>
+        <service android:name=".battery.ChargingLimitService" />
+
+        <activity
+            android:name=".battery.ChargingControlActivity"
+            android:label="@string/charging_control_title"
+            android:theme="@style/Theme.SubSettingsBase_v31"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.battery" />
+        </activity>
 
     </application>
 </manifest>
