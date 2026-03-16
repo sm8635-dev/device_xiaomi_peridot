@@ -13,10 +13,9 @@
         <SeekBarPreference
             android:key="charging_limit"
             android:title="Stop at Percentage"
-            android:summary="Current limit: %s%%"
             android:defaultValue="80"
             android:max="100"
-            app:min="50"
+            app:min="10"
             android:dependency="charging_control" />
     </PreferenceCategory>
 
