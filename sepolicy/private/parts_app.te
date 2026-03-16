@@ -14,3 +14,7 @@ allow parts_app vendor_perf_service:service_manager find;
 allow parts_app system_app_data_file:dir create_dir_perms;
 allow parts_app system_app_data_file:file create_file_perms;
 allow parts_app system_app_data_file:lnk_file create_file_perms;
+
+# Charging Control
+allow parts_app vendor_sysfs_battery_supply:dir search;
+allow parts_app vendor_sysfs_battery_supply:file rw_file_perms;
