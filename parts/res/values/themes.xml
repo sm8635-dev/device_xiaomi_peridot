@@ -16,18 +16,10 @@
   -->
 
 <resources>
-
-    <!-- Using in SubSettings page including injected settings page -->
-    <style name="Theme.SubSettingsBase_v31" parent="Theme.SettingsBase_v31">
-        <!-- Suppress the built-in action bar -->
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowNoTitle">true</item>
-        <!-- Set up edge-to-edge configuration for top app bar -->
+    <style name="Theme.SubSettingsBase.Expressive" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="colorControlNormal">?android:attr/colorControlNormal</item>
-        <!-- For AndroidX AlertDialog -->
-        <item name="alertDialogTheme">@style/Theme.AlertDialog.SettingsLib</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
     </style>
-
+    <style name="Theme.SubSettingsBase_v31" parent="Theme.SubSettingsBase.Expressive" />
 </resources>
