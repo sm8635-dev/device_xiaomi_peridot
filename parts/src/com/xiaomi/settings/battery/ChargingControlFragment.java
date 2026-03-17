@@ -6,18 +6,21 @@
 
 package com.xiaomi.settings.battery;
 
-import android.os.Bundle;
+import android.content.Context;
 import android.content.Intent;
+import android.os.BatteryManager;
+import android.os.Bundle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
 import androidx.preference.SeekBarPreference;
-import com.xiaomi.settings.R;
+import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
+import com.xiaomi.settings.R;
 
 public class ChargingControlFragment extends SettingsBasePreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private SeekBarPreference mLimitPref;
+    private MainSwitchPreference mMasterSwitch;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -25,20 +28,37 @@ public class ChargingControlFragment extends SettingsBasePreferenceFragment impl
 
         mLimitPref = findPreference(BatteryUtils.PREF_CHARGING_LIMIT);
         mLimitPref.setOnPreferenceChangeListener(this);
-        
         updateSummary(mLimitPref.getValue());
 
-        findPreference(BatteryUtils.PREF_CHARGING_CTRL).setOnPreferenceChangeListener(this);
+        mMasterSwitch = findPreference(BatteryUtils.PREF_CHARGING_CTRL);
+        mMasterSwitch.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mLimitPref) {
-            updateSummary((int) newValue);
+        boolean isEnabled = mMasterSwitch.isChecked();
+        int limit = mLimitPref.getValue();
+
+        if (preference == mMasterSwitch) {
+            isEnabled = (boolean) newValue;
+        } else if (preference == mLimitPref) {
+            limit = (int) newValue;
+            updateSummary(limit);
         }
 
-        getContext().startService(new Intent(getContext(), ChargingLimitService.class));
+        int currentLevel = getBatteryLevel();
+        boolean shouldSuspend = isEnabled && (currentLevel >= limit);
+        BatteryUtils.setChargingSuspendAsync(shouldSuspend);
+
+        if (getContext() != null) {
+            getContext().startService(new Intent(getContext(), ChargingLimitService.class));
+        }
         return true;
+    }
+
+    private int getBatteryLevel() {
+        BatteryManager bm = (BatteryManager) getContext().getSystemService(Context.BATTERY_SERVICE);
+        return bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
     }
 
     private void updateSummary(int value) {
