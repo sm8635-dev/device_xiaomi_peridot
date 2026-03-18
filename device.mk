@@ -128,6 +128,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.context_hub.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.context_hub.xml
 
 # Dexopt
+ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_PROPERTIES += \
     pm.dexopt.post-boot=speed \
     pm.dexopt.first-boot=speed \
@@ -149,6 +150,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
 OVERRIDE_DISABLE_DEXOPT_ALL := false
+endif
 
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
