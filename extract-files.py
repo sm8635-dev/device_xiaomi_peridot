@@ -72,6 +72,8 @@ blob_fixups: blob_fixups_user_type = {
             'libgui.so',
             'libgui-xiaomi.so'
         ),
+    'system_ext/etc/init/qspa_system.rc': blob_fixup()
+        .regex_replace(r'\$\{ro\.boot\.vendor\.qspa:-default\}', 'default'),
     'system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml': blob_fixup()
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
