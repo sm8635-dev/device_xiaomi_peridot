@@ -7,4 +7,6 @@
   ( new_objects
     glyph_app
     sltntc
-    system_fingerprint_prop))
+    system_fingerprint_prop
+    vendor_hal_displayfeature_xiaomi_default
+    vendor_hal_displayfeature_xiaomi_service))
