@@ -1003,6 +1003,7 @@ vendor/lib64/libFace3D_hlos.so
 vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libSNPESample.so
 vendor/lib64/libcameraopt.so
+vendor/lib64/libjpegencoder.so:vendor/lib64/libjpegencoder_prebuilt.so;FIX_SONAME
 vendor/lib64/libface3d_dev.so
 vendor/lib64/libjpegdecoder.so:vendor/lib64/libjpegdecoder_prebuilt.so;FIX_SONAME
 vendor/lib64/libmialgo.so
