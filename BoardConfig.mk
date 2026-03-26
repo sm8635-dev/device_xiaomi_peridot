@@ -16,7 +16,6 @@ AB_OTA_PARTITIONS := \
     init_boot \
     odm \
     product \
-    recovery \
     system \
     system_dlkm \
     system_ext \
@@ -234,7 +233,6 @@ $(call soong_config_set, ufsbsg, ufsframework, bsg)
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_UI_MARGIN_HEIGHT := 126
 TARGET_USERIMAGES_USE_F2FS := true
 
 # RIL
