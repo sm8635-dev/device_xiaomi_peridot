@@ -320,8 +320,9 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libmialgo.so',
         'vendor/lib64/libmisr.so',
     ): blob_fixup()
-        .remove_needed(
-            'libopencl_loader.so'
+        .replace_needed(
+            'libopencl_loader.so',
+            'libperidot_ocl_shim.so',
     ),
 }  # fmt: skip
 
