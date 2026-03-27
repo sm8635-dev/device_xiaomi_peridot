@@ -1,0 +1,9 @@
+cc_library_shared {
+    name: "libperidot_ocl_shim",
+    srcs: ["libperidot_ocl_shim.cpp"],
+    shared_libs: [
+        "libOpenCL",
+        "liblog",
+    ],
+    vendor: true,
+}

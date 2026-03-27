@@ -6,7 +6,8 @@
 soong_namespace {
     imports: [
         "hardware/qcom-caf/common/libqti-perfd-client",
-        "hardware/xiaomi"
+        "hardware/xiaomi",
+        "vendor/xiaomi/peridot"
     ],
 }
 
