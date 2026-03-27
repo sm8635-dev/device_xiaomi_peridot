@@ -316,6 +316,13 @@ blob_fixups: blob_fixups_user_type = {
             'libtensorflowlite_c.so',
             'libtensorflowlite_c_vendor.so',
     ),
+    (
+        'vendor/lib64/libmialgo.so',
+        'vendor/lib64/libmisr.so',
+    ): blob_fixup()
+        .remove_needed(
+            'libopencl_loader.so'
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
