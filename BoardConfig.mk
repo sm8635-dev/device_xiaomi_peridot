@@ -8,9 +8,6 @@ DEVICE_PATH := device/xiaomi/peridot
 
 BUILD_BROKEN_DUP_RULES := true
 
-# Inherit from proprietary files for miuicamera
--include device/xiaomi/peridot-miuicamera/BoardConfig.mk
-
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -182,6 +179,9 @@ TARGET_KERNEL_EXT_MODULES := \
 
 # MiuiCamera
 CAMERA_PACKAGE_NAME := com.android.camera
+TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
+TARGET_INCLUDES_MIUI_CAMERA := true
+TARGET_USES_MIUI_CAMERA := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
