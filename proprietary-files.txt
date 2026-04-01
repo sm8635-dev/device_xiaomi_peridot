@@ -1809,6 +1809,14 @@ odm/lib64/libmlipay.so
 vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay-V1-ndk_platform.so
 
+# MiuiCamera - pinned from peridot V816.0.7.0.UNPMIXM - miui_PERIDOTGlobal_OS1.0.7.0.UNPMIXM
+product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera,Camera2,GoogleCameraGo
+system/lib64/libgui.so:system/lib64/libgui-xiaomi.so
+system_ext/lib64/libcamera_algoup_jni.xiaomi.so:system/lib64/libcamera_algoup_jni.xiaomi.so
+system_ext/lib64/libcamera_mianode_jni.xiaomi.so:system/lib64/libcamera_mianode_jni.xiaomi.so
+system_ext/lib64/libmicampostproc_client.so:system/lib64/libmicampostproc_client.so
+system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so:system/lib64/vendor.xiaomi.hardware.campostproc@1.0.so;MODULE_SUFFIX=_system
+
 # NFC
 odm/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 odm/etc/libnfc-nxp.conf:vendor/etc/libnfc-nxp.conf

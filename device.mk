@@ -23,9 +23,6 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
 
-# Call the MiuiCamera setup
-$(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
-
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -324,6 +321,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
+# MiuiCamera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/default-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-permissions-miuicamera.xml \
+    $(LOCAL_PATH)/configs/permissions/miuicamera-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/miuicamera-hiddenapi-package-whitelist.xml \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml
+
 # Network
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
@@ -350,6 +353,7 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayPeridot \
     LineageSDKOverlayPeridot \
     LineageSettingsOverlayPeridot \
+    MiuiCameraOverlayIcon \
     NfcOverlayPeridot \
     PixelUpdater \
     SecureElementOverlayPeridot \
