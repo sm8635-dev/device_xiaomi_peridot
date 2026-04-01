@@ -32,6 +32,9 @@ namespace_imports = [
 def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'odm' else None
 
+def lib_fixup_system_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'system' else None
+
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
@@ -41,6 +44,7 @@ lib_fixups: lib_fixups_user_type = {
         'sqlite3',
         'libqshcamera',
     ): lib_fixup_odm_suffix,
+    'vendor.xiaomi.hardware.campostproc@1.0': lib_fixup_system_suffix,
     (
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.qccsyshal@1.0',
@@ -55,6 +59,20 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system/lib64/libgui-xiaomi.so': blob_fixup()
+        .fix_soname()
+        .replace_needed(
+            'android.hardware.graphics.common-V5-ndk.so',
+            'android.hardware.graphics.common-V7-ndk.so'
+        ),
+    (
+        'system/lib64/libcamera_algoup_jni.xiaomi.so',
+        'system/lib64/libcamera_mianode_jni.xiaomi.so',
+    ): blob_fixup()
+        .replace_needed(
+            'libgui.so',
+            'libgui-xiaomi.so'
+        ),
     'system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml': blob_fixup()
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
