@@ -21,7 +21,7 @@ PRODUCT_MANUFACTURER := Xiaomi
 -include vendor/lineage-priv/keys/keys.mk
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BuildFingerprint := POCO/peridot_global/peridot:16/BP2A.250605.031.A3/OS3.0.4.0.WNPMIXM:user/release-keys
+BuildFingerprint := POCO/peridot_global/peridot:16/BP2A.250605.031.A3/OS3.0.5.0.WNPMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
