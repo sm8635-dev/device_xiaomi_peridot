@@ -302,6 +302,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('setsockopt: 1'),
     'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
         .regex_replace('.+DOLBY.+\n', ''),
+    'vendor/etc/init/hw/init.batterysecret.rc' : blob_fixup()
+        .regex_replace('group system system wakelock', 'group system system usb wakelock'),
     (
         'vendor/bin/qcc-vendor',
         'vendor/bin/qms',
