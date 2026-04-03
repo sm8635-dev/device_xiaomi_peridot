@@ -1851,12 +1851,12 @@ vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay-V1-ndk_platform.so
 
 # MiuiCamera - pinned from peridot V816.0.7.0.UNPMIXM - miui_PERIDOTGlobal_OS1.0.7.0.UNPMIXM
-product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera,Camera2,GoogleCameraGo|1811ee04768ff5a630a581c0ab598d1eb96296b6
-system/lib64/libgui.so:system/lib64/libgui-xiaomi.so|80d389457cdd18ba00515077a1c710daaf2b7683|74f26ff164d8b1dc6d100e7b524640d4dd08fdd9
-system_ext/lib64/libcamera_algoup_jni.xiaomi.so:system/lib64/libcamera_algoup_jni.xiaomi.so|52b9815cdde8725ad91d2fea0bbb6387cd0b6c90|bc802fbbc65ff7ba4c8c96bdef4f22bd07dca4ad
-system_ext/lib64/libcamera_mianode_jni.xiaomi.so:system/lib64/libcamera_mianode_jni.xiaomi.so|02296ec9af8a94cc3134d4ec9628ca242be8b311|25611e5b26fe80c258aa5dcb54f718c5d5602e26
+product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera,Camera2,GoogleCameraGo|e2f3d1c0009b6cd9d8688a0b4924b0d80a87bf11
+system/lib64/libgui.so:system/lib64/libgui-xiaomi.so|60e1974dce14b8ad7b22a94b43d8e62dbdda2ed3|60e1974dce14b8ad7b22a94b43d8e62dbdda2ed3
+system_ext/lib64/libcamera_algoup_jni.xiaomi.so:system/lib64/libcamera_algoup_jni.xiaomi.so|9b2b5dabfdf09c1a572257c6e780e4f1b00a3732|9b2b5dabfdf09c1a572257c6e780e4f1b00a3732
+system_ext/lib64/libcamera_mianode_jni.xiaomi.so:system/lib64/libcamera_mianode_jni.xiaomi.so|1895132fa9d56f9acaa2169ab412673c7e820db5|1895132fa9d56f9acaa2169ab412673c7e820db5
 system_ext/lib64/libmicampostproc_client.so:system/lib64/libmicampostproc_client.so|8bd4c36da51ad3b77453a4b4f8527b78d293f274
-system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so:system/lib64/vendor.xiaomi.hardware.campostproc@1.0.so;MODULE_SUFFIX=_system|d8eee9206a975e25ef04cc2c9109e6f67a724cbb
+system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so:system/lib64/vendor.xiaomi.hardware.campostproc@1.0.so;MODULE_SUFFIX=_system|27a1f8da458329ea1f78fbbbc05d9f5d2f116633
 
 # NFC
 odm/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
