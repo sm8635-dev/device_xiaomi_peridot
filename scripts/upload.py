@@ -40,7 +40,7 @@ else:
 
 dest = f"zenin1504@frs.sourceforge.net:/home/frs/project/peridot-build/{dir_name}/"
 
-for img in ["boot.img", "dtbo.img", "init_boot.img", "vendor_boot.img"]:
+for img in ["boot.img", "dtbo.img", "init_boot.img", "recovery.img", "vendor_boot.img"]:
     path = os.path.join(img_dir, img)
     if os.path.exists(path):
         print(f"Uploading {img}...")
