@@ -172,6 +172,7 @@ TARGET_KERNEL_EXT_MODULES := \
     nxp/opensource/driver
 
 # MiuiCamera
+$(call soong_config_set_bool,camera,override_format_from_reserved,true)
 CAMERA_PACKAGE_NAME := com.android.camera
 TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
 TARGET_INCLUDES_MIUI_CAMERA := true
