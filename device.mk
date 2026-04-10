@@ -194,6 +194,10 @@ PRODUCT_PACKAGES += \
 # Dolby
 $(call inherit-product, vendor/sony/dolby/dolby.mk)
 
+# Device-Features
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/device_features/peridot.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/peridot.xml
+
 # Enable whole-program R8 Java optimizations for SystemUI and system_server,
 # but also allow explicit overriding for testing and development.
 SYSTEM_OPTIMIZE_JAVA := true
