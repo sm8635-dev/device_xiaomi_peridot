@@ -1706,26 +1706,26 @@ vendor/etc/init/android.hardware.gatekeeper-service-qti.rc
 vendor/lib64/hw/libqtigatekeeper.so
 
 # Graphics (Adreno) - pinned from WW-36.0210.1420.39
-vendor/lib64/egl/eglSubDriverAndroid.so|2f16d4091de26bb0e24b726d95bf3ac5a73ad2d2
+vendor/lib64/egl/eglSubDriverAndroid.so|5fa45337aaeac15263e9ec4b89a7ea1e448a944e
 vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|02e863881eff132f3a6f726824f9a33ddaacd717
 vendor/lib64/egl/libGLESv1_CM_adreno.so|9c667937b0d5e51a674d56e112684fea796c4e42
-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|e34e1fd94f5667de93ddf008840b7c4b46f74583
-vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|11c9e43d770d677baffaa6ef44751e0faaffbd71
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|e34c9b485b4bcd09dd435b25c5f004ad99e651d1
+vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|ce7c3048ecdee0062d84b4abff6f540056007145
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|b754367f7547601982d789e8373bfc0d95ba2e16
-vendor/lib64/egl/libq3dtools_esx.so|b9faf39b95a44c934ea8ec27868cea990ede38b6
-vendor/lib64/hw/vulkan.adreno.so|b553689792723b9be10c2c68de862f920a01adaf
-vendor/lib64/libCB.so|0616a283b52718baf35abf3c4cdb34eea05434bc
+vendor/lib64/egl/libq3dtools_esx.so|c2f5d813068b271439bb6fa4e360235ad9c9cbfa
+vendor/lib64/hw/vulkan.adreno.so|733bad5c6ae0ce14d9351a20210bda3a1b86f6de
+vendor/lib64/libCB.so|617d7a0dfcb92857417dbd8ce1ad9dd710a4b375
 vendor/lib64/libOpenCL.so|07c0984f0c662768fb16c5927d086105a734f7b0
 vendor/lib64/libOpenCL_adreno.so|1e421fd8f826398303f6a9000e08bdbed6f15b29
-vendor/lib64/libadreno_app_profiles.so|fb33df624010ddb288c75b3952d1ee9d97a89722
-vendor/lib64/libadreno_utils.so|7ae80ea4fb56c506c867b17bb1741f5f03d71ed7
-vendor/lib64/libgpudataproducer.so|1a59e0c7a79db0555be0364728c6626e1aee6603
-vendor/lib64/libgsl.so|ddac31957126a7e72a61196c0a1f27cfb5d80c7f
-vendor/lib64/libkcl.so|111f2392c8a76f00485f109f3bc26b6844f52f06
-vendor/lib64/libkernelmanager.so|f8f4d3ee0b0aceacf92a35676909a45d3cb881c4
-vendor/lib64/libllvm-glnext.so|1e503591bbc63308a9fc6bae285c4623dd674026
+vendor/lib64/libadreno_app_profiles.so|d721cd375e15ffad8353979c60aebfa6ef7dea69
+vendor/lib64/libadreno_utils.so|e830e04946f99e8dd5f4177d9079cc12566fc23a
+vendor/lib64/libgpudataproducer.so|a7841c98006ef831660e31968e4e946429852638
+vendor/lib64/libgsl.so|c128a513b904e77bb8a02021a15e6ce589d1e9ac
+vendor/lib64/libkcl.so|8744ec4bb075298c2dcf191110d26babaf949120
+vendor/lib64/libkernelmanager.so|ac6ec24e873cd8ad135c67072cc7d127a594b571
+vendor/lib64/libllvm-glnext.so|54de18ea1f8fd7319c43eb0c0a64d2f46efa3625
 vendor/lib64/libllvm-qcom.so|e8f013019aa86d6b0083771d77a2182da3cafd6e
-vendor/lib64/libllvm-qgl.so|7aee7a5130d13a248b6176343e5e6b373f25138a
+vendor/lib64/libllvm-qgl.so|1f40852532a3104c4b7623990e471937c7ab5f2a
 
 # Graphics firmware
 odm/firmware/gen70900_zap.mbn
