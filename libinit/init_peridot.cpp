@@ -67,15 +67,15 @@ void vendor_load_properties() {
     if (region == "IN") {
         device = "peridot";
         brand = "POCO";
-        description = "peridot_global-user 16 BP2A.250605.031.A3 OS3.0.5.0.WNPMIXM release-keys";
-        fingerprint = "POCO/peridot_global/peridot:16/BP2A.250605.031.A3/OS3.0.5.0.WNPMIXM:user/release-keys";
+        description = "peridot_global-user 16 BP2A.250605.031.A3 OS3.0.6.0.WNPMIXM release-keys";
+        fingerprint = "POCO/peridot_global/peridot:16/BP2A.250605.031.A3/OS3.0.6.0.WNPMIXM:user/release-keys";
         marketname = "POCO F6";
         model = "24069PC21I";
     } else if (region == "GL") {
         device = "peridot";
         brand = "POCO";
-        description = "peridot_global-user 16 BP2A.250605.031.A3 OS3.0.5.0.WNPMIXM release-keys";
-        fingerprint = "POCO/peridot_global/peridot:16/BP2A.250605.031.A3/OS3.0.5.0.WNPMIXM:user/release-keys";
+        description = "peridot_global-user 16 BP2A.250605.031.A3 OS3.0.6.0.WNPMIXM release-keys";
+        fingerprint = "POCO/peridot_global/peridot:16/BP2A.250605.031.A3/OS3.0.6.0.WNPMIXM:user/release-keys";
         marketname = "POCO F6";
         model = "24069PC21G";
     } else if (region == "CN") {
