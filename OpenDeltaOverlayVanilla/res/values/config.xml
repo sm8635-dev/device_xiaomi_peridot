@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- the branch name to format URLs with -->
+	<string name="url_branch_name">master</string>
+
+	<!-- URL base to find .update and .sign files, %s is expanded to property_device value. -->
+	<string name="url_base_update" formatted="false">https://zenin1504.dpdns.org/%s/yaap/</string>
+
+	<!-- URL base to find the full zip files, %s is replaced to be property_device value. -->
+	<string name="url_base_full" formatted="false">https://zenin1504.dpdns.org/%s/yaap/</string>
+
+	<!-- URL base to find the full zip sha256sum files, %s is replaced to be property_device value. -->
+	<string name="url_base_full_sum" formatted="false">https://zenin1504.dpdns.org/%s/yaap/</string>
+
+	<!-- URL base to fetch all builds. first %s is replaced by branch name later on by property_device -->
+	<string name="url_base_json" formatted="false">https://raw.githubusercontent.com/sm8635-dev/updater/%s/%s/%s.json</string>
+
+	<!-- github API url, pointing to the OTA json repo. %s formatted as described above -->
+	<string name="url_api_history" formatted="false">https://api.github.com/repos/sm8635-dev/updater/commits?sha=%s&amp;path=%s/%s.json</string>
+</resources>

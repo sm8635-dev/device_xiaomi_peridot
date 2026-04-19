@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "Xiaomi8635OpenDeltaOverlayVanilla",
+    product_specific: true,
+}
