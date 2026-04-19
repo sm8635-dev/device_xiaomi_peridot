@@ -130,30 +130,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.context_hub.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.context_hub.xml
 
-# Dexopt
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_SYSTEM_PROPERTIES += \
-    pm.dexopt.post-boot=speed \
-    pm.dexopt.first-boot=speed \
-    pm.dexopt.boot-after-ota=speed-profile \
-    pm.dexopt.boot-after-mainline-update=speed \
-    pm.dexopt.install=speed-profile \
-    pm.dexopt.install-fast=speed \
-    pm.dexopt.install-bulk=speed-profile \
-    pm.dexopt.install-bulk-secondary=speed \
-    pm.dexopt.install-bulk-downgraded=speed \
-    pm.dexopt.install-bulk-secondary-downgraded=speed \
-    pm.dexopt.bg-dexopt=speed-profile \
-    pm.dexopt.ab-ota=speed-profile \
-    pm.dexopt.inactive=speed \
-    pm.dexopt.cmdline=speed \
-    pm.dexopt.first-use=speed-profile \
-    pm.dexopt.secondary=speed-profile \
-    pm.dexopt.shared=speed
-
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
-OVERRIDE_DISABLE_DEXOPT_ALL := false
-endif
+# CameraExtensions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/camerax-vendor-extensions.xml
 
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
@@ -163,10 +142,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heaptargetutilization=0.46 \
     dalvik.vm.heapminfree=8m \
     dalvik.vm.heapmaxfree=48m
-
-# CameraExtensions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/camerax-vendor-extensions.xml
 
 # Display
 PRODUCT_PACKAGES += \
