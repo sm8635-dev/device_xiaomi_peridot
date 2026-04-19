@@ -399,7 +399,8 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayPeridot \
     WifiOverlayPeridot \
     WifiOverlayPeridotPOCO \
-    WifiOverlayPeridotRedmi
+    WifiOverlayPeridotRedmi \
+    Xiaomi8635OpenDeltaOverlayVanilla
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
