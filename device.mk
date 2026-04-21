@@ -375,11 +375,17 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayPeridot \
     WifiOverlayPeridot \
     WifiOverlayPeridotPOCO \
-    WifiOverlayPeridotRedmi \
-    Xiaomi8635OpenDeltaOverlayVanilla
+    WifiOverlayPeridotRedmi
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
+
+# OpenDelta
+ifeq ($(TARGET_BUILD_GAPPS),true)
+   PRODUCT_PACKAGES += Xiaomi8635OpenDeltaOverlayGapps
+else
+   PRODUCT_PACKAGES += Xiaomi8635OpenDeltaOverlayVanilla
+endif
 
 # Parts
 PRODUCT_PACKAGES += \
