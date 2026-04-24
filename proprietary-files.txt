@@ -246,8 +246,6 @@ vendor/lib64/libnspresource.so
 vendor/lib64/libnspscheduler.so
 vendor/lib64/libnspsession.so
 vendor/lib64/libnsptransaction.so
-vendor/lib64/libqms.so
-vendor/lib64/libqms_client.so
 vendor/lib64/libshsc.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
