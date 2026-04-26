@@ -403,7 +403,6 @@ PRODUCT_PACKAGES += \
     ApertureOverlayPeridot \
     CarrierConfigOverlayPeridot \
     DeviceAsWebcamResTarget \
-    EmptyPropsOverlay \
     FrameworkOverlayPeridot \
     FastChargePeridot \
     LineageSDKOverlayPeridot \
@@ -423,6 +422,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
+
+ifeq ($(TARGET_BUILD_GAPPS),false)
+PRODUCT_PACKAGES += \
+    EmptyPropsOverlay
+endif
 
 # OpenDelta
 ifeq ($(TARGET_BUILD_GAPPS),true)
