@@ -1719,7 +1719,7 @@ vendor/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
 
 # QESDK
-system_ext/app/QesdkSysService/QesdkSysService.apk|e64293028d0df131a2536e9ced0eeeaf68fdfe32
+system_ext/app/FrameworksUtilsSysService/FrameworksUtilsSysService.apk
 system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml
 system_ext/lib64/libqesdk_ndk_platform.qti.so
 vendor/bin/qesdk-manager
@@ -1790,6 +1790,10 @@ vendor/lib64/libqspm-mem-utils-vendor.so
 vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
 vendor/lib64/vendor.qti.qspmhal-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
+
+# QSPA
+system_ext/etc/init/qspa_system.rc
+system_ext/etc/qspa/qspa_default.rc
 
 # RIL
 odm/etc/MESubway_prebuilt.db
