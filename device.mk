@@ -123,6 +123,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.context_hub.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.context_hub.xml
 
+# Charging
+PRODUCT_PACKAGES += \
+    charging
+
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapstartsize?=16m \
