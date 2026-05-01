@@ -26,6 +26,9 @@ TARGET_BOARD_PLATFORM := pineapple
 # Reduce system server verbosity
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 
+# XiaomiParts
+$(call inherit-product, packages/apps/XiaomiParts/parts.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
