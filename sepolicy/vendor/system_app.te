@@ -6,12 +6,6 @@ allow system_app vendor_sysfs_battery_supply:file { open read getattr };
 # Allow KProfiles to be adjusted by a system app
 allow system_app sysfs_kprofiles:file rw_file_perms;
 
-# Color
-hal_client_domain(system_app, vendor_hal_displayfeature_xiaomi)
-
-# Charging Control
-allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
-
 # Zram
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;

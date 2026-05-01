@@ -1,2 +1,0 @@
-# Displayfeature
-type vendor_hal_displayfeature_xiaomi_service, hal_service_type, service_manager_type;
