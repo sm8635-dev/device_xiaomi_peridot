@@ -15,6 +15,10 @@ service vendor.charging /vendor/bin/charging
     user system
     group system
     capabilities DAC_OVERRIDE
+    seclabel u:r:charging:s0
+
+on property:sys.boot_completed=1
+        restart vendor.charging
 
 on init
     copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
