@@ -2217,6 +2217,7 @@ vendor/lib64/vendor.qti.hardware.soter-V1-ndk.so
 
 # Thermal
 vendor/bin/thermal-engine-v2
+vendor/lib64/liblmthermallistner.so
 vendor/lib64/libthermalclient.so
 
 # Time services
