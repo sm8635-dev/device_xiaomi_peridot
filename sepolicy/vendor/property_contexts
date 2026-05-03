@@ -151,6 +151,9 @@ vendor.panel.display. u:object_r:vendor_fp_prop:s0
 persist.vendor.sensors.ins. u:object_r:vendor_mi_ins_prop:s0
 persist.vendor.sensors.ins_debug u:object_r:vendor_mi_ins_prop:s0
 
+# Ir
+vendor.ir.carrier_freqs u:object_r:vendor_ir_prop:s0
+
 # Mlipay
 odm.security.rootpub.load u:object_r:vendor_payment_security_prop:s0
 odm.security.rootpub.trigger u:object_r:vendor_payment_security_prop:s0

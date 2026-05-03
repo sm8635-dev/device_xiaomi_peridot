@@ -18,16 +18,6 @@ git fetch https://github.com/LineageOS/android_hardware_qcom_audio-ar lineage-23
 git reset --hard FETCH_HEAD
 croot
 
-cd hardware/lineage/interfaces
-git fetch https://github.com/sm8635-dev/hardware_lineage_interfaces sixteen
-git reset --hard FETCH_HEAD
-croot
-
-cd device/lineage/sepolicy
-git fetch https://github.com/sm8635-dev/device_lineage_sepolicy sixteen
-git reset --hard FETCH_HEAD
-croot
-
 cd frameworks/base
 git fetch https://github.com/sm8635-dev/frameworks_base sixteen
 git reset --hard FETCH_HEAD

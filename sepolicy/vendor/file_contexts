@@ -74,6 +74,10 @@
 /(odm|vendor|vendor/odm|system/vendor/odm)/bin/hw/android\.hardware\.gnss.*-service-qti u:object_r:vendor_hal_gnss_qti_exec:s0
 /data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
 
+# Ir
+/dev/lirc0 u:object_r:lirc_device:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir-service\.peridot u:object_r:hal_ir_default_exec:s0
+
 # Keymint
 /vendor/bin/hw/android\.hardware\.authsecret-service\.nxp                          u:object_r:hal_authsecret_default_exec:s0
 
