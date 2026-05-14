@@ -116,7 +116,10 @@ TARGET_KERNEL_CONFIG := \
 BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=peridot:$(YAAP_VERSION) \
     mtdoops.fingerprint=peridot:$(YAAP_VERSION) \
-    androidboot.init_fatal_reboot_target=recovery
+    androidboot.init_fatal_reboot_target=recovery \
+    rcupdate.rcu_expedited=1 \
+    rcu_nocbs=all \
+    rcutree.enable_rcu_lazy=0
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
