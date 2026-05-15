@@ -4,7 +4,7 @@ abl.elf:abl.img;AB
 aop.mbn:aop.img;AB
 aop_devcfg.mbn:aop_config.img;AB
 BTFM.bin:bluetooth.img;AB
-countrycode.img;AB
+#countrycode.img;AB
 cpucp.elf:cpucp.img;AB
 cpucp_dtbs.elf:cpucp_dtb.img;AB
 devcfg.mbn:devcfg.img;AB
