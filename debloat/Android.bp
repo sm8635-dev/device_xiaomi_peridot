@@ -10,6 +10,8 @@ cc_prebuilt_binary {
         "arcore",
         "ConnMO",
         "ConnMetrics",
+        "Chrome",
+        "Chrome-Stub",
         "DCMO",
         "DMService",
         "DevicePolicyPrebuilt",
