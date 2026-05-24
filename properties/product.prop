@@ -31,6 +31,10 @@ ro.lmk.swap_free_low_percentage=15
 # Media
 media.stagefright.audio.deep=true
 
+# Perf
+persist.sys.perf.scroll_opt=true
+persist.sys.perf.scroll_opt.heavy_app=1
+
 # RKPD
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
