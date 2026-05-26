@@ -18,6 +18,7 @@ cc_prebuilt_binary {
         "GCS",
         "GoogleTTS",
         "Glimpse",
+        "Jelly",
         "MyVerizonServices",
         "OBDM_Permissions",
         "OdadPrebuilt",
