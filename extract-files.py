@@ -72,8 +72,6 @@ blob_fixups: blob_fixups_user_type = {
             'libgui.so',
             'libgui-xiaomi.so'
         ),
-    'odm/etc/init/vendor.qti.camera.provider-service_64.rc': blob_fixup()
-        .regex_replace(r'^(.*\n){5}', '\\1    setenv JE_MALLOC_ZERO_FILLING 1\n'),
     'system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml': blob_fixup()
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
@@ -87,14 +85,63 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.media.audio.common.types-V4-cpp.so',
             'android.media.audio.common.types-V5-cpp.so'
-        .add_needed('libaudiobase.so')
-    'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
-        .add_needed('libgui_shim.so'),
+        )
+        .add_needed('libaudiobase.so'),
     'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
         .replace_needed(
             'libprotobuf-cpp-full.so',
             'libprotobuf-cpp-full-21.7.so'
-    ),
+        ),
+    'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
+        .add_line_if_missing('setsockopt: 1'),
+    (
+        'vendor/bin/qcc-vendor',
+        'vendor/bin/qms',
+        'vendor/bin/xtra-daemon',
+        'vendor/lib64/libcne.so',
+        'vendor/lib64/libqcc_sdk.so',
+        'vendor/lib64/libqms_client.so',
+    ): blob_fixup()
+        .add_needed('libbinder_shim.so'),
+    'vendor/lib64/libqcodec2_core.so': blob_fixup()
+        .add_needed('libcodec2_shim.so'),
+    'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
+        .add_needed('libbinder_shim.so')
+        .add_needed('libhidlbase_shim.so'),
+    'vendor/lib64/libultrahdr_prebuilt.so': blob_fixup()
+        .replace_needed(
+            'libjpegdecoder.so',
+            'libjpegdecoder_prebuilt.so'
+        )
+        .replace_needed(
+            'libjpegencoder.so',
+            'libjpegencoder_prebuilt.so'
+        ),
+    (
+        'vendor/lib64/libVoiceSdk.so',
+        'vendor/lib64/libcapiv2uvvendor.so',
+        'vendor/lib64/liblistensoundmodel2vendor.so',
+    ): blob_fixup()
+        .replace_needed(
+            'libtensorflowlite_c.so',
+            'libtensorflowlite_c_vendor.so'
+        ),
+    (
+        'vendor/lib64/libmialgo.so',
+        'vendor/lib64/libmisr.so',
+    ): blob_fixup()
+        .replace_needed(
+            'libopencl_loader.so',
+            'libperidot_ocl_shim.so'
+        ),
+    'odm/etc/init/vendor.qti.camera.provider-service_64.rc': blob_fixup()
+        .regex_replace(r'^(.*\n){5}', '\\1    setenv JE_MALLOC_ZERO_FILLING 1\n'),
+    (
+        'odm/etc/camera/enhance_motiontuning.xml',
+        'odm/etc/camera/motiontuning.xml',
+        'odm/etc/camera/night_motiontuning.xml'
+    ): blob_fixup()
+        .regex_replace('xml=version', 'xml version'),
     (
         'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl',
         'odm/lib64/camera/plugins/com.xiaomi.plugin.anchor.so',
@@ -109,13 +156,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libtinyxml2.so',
             'libtinyxml2-v34.so'
-    ),
-    (
-        'odm/etc/camera/enhance_motiontuning.xml',
-        'odm/etc/camera/motiontuning.xml',
-        'odm/etc/camera/night_motiontuning.xml'
-    ): blob_fixup()
-        .regex_replace('xml=version', 'xml version'),
+        ),
     (
         'odm/lib64/camera/plugins/com.xiaomi.plugin.gainmap.so',
         'odm/lib64/camera/plugins/com.xiaomi.plugin.jpegrAggr.so',
@@ -123,7 +164,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libultrahdr.so',
             'libultrahdr_prebuilt.so'
-    ),
+        ),
     (
         'odm/lib64/hw/camera.qcom.so',
         'odm/lib64/hw/com.qti.chi.override.so',
@@ -133,7 +174,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
             'android.hardware.graphics.allocator-V2-ndk.so'
-    ),
+        ),
     'odm/lib64/hw/camera.xiaomi.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so')
         .replace_needed(
@@ -147,7 +188,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libui.so',
             'libui-v34.so'
-    ),
+        ),
     (
         'odm/lib64/camera/com.qti.actuator.peridot_aac_imx882_gt9764ber_wide_i_actuator.so',
         'odm/lib64/camera/com.qti.actuator.peridot_ofilm_imx882_aw86016csr_wide_ii_actuator.so',
@@ -262,7 +303,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
             'android.hardware.graphics.allocator-V2-ndk.so'
-    ),
+        ),
     'odm/lib64/com.qti.feature2.anchorsync.so': blob_fixup()
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
@@ -271,7 +312,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libtinyxml2.so',
             'libtinyxml2-v34.so'
-    ),
+        ),
     (
         'odm/lib64/libcamxcommonutils.so',
         'odm/lib64/libmialgoengine.so',
@@ -302,7 +343,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libaudioroute.so',
             'libaudioroute-v34.so'
-    ),
+        ),
     (
         'odm/lib64/libmiSensorCtrl.so',
         'odm/lib64/librhytheyecare.so',
@@ -310,49 +351,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so'
-    ),
-    'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
-        .add_line_if_missing('setsockopt: 1'),
-    (
-        'vendor/bin/qcc-vendor',
-        'vendor/bin/qms',
-        'vendor/bin/xtra-daemon',
-        'vendor/lib64/libcne.so',
-        'vendor/lib64/libqcc_sdk.so',
-        'vendor/lib64/libqms_client.so',
-    ): blob_fixup()
-        .add_needed('libbinder_shim.so'),
-    'vendor/lib64/libqcodec2_core.so': blob_fixup()
-        .add_needed('libcodec2_shim.so'),
-    'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
-        .add_needed('libbinder_shim.so')
-        .add_needed('libhidlbase_shim.so'),
-    'vendor/lib64/libultrahdr_prebuilt.so': blob_fixup()
-        .replace_needed(
-            'libjpegdecoder.so',
-            'libjpegdecoder_prebuilt.so'
-        )
-        .replace_needed(
-            'libjpegencoder.so',
-            'libjpegencoder_prebuilt.so'
-    ),
-    (
-        'vendor/lib64/libVoiceSdk.so',
-        'vendor/lib64/libcapiv2uvvendor.so',
-        'vendor/lib64/liblistensoundmodel2vendor.so',
-    ): blob_fixup()
-        .replace_needed(
-            'libtensorflowlite_c.so',
-            'libtensorflowlite_c_vendor.so',
-    ),
-    (
-        'vendor/lib64/libmialgo.so',
-        'vendor/lib64/libmisr.so',
-    ): blob_fixup()
-        .replace_needed(
-            'libopencl_loader.so',
-            'libperidot_ocl_shim.so',
-    ),
+        ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
